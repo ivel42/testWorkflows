@@ -11,6 +11,6 @@ echo "# generated with 'pip freeze' to make sure github action doesent update en
 pip freeze >> requirements.txt
 
 .\make.bat html
+.\make.bat latexpdf
 
 deactivate
-# end
