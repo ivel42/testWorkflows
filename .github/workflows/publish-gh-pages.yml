@@ -1,0 +1,23 @@
+# example from: https://seanzhengw.github.io/sphinx-pages/index.html
+# fix access rights: https://github.com/ad-m/github-push-action/issues/96#issuecomment-889984928
+
+name: "Publish on gh_pages"
+
+on:
+  push:
+    branches:
+      - main
+  #pull_request:
+  #  branches:    
+  #    - main
+
+jobs:
+  build:
+    name: Sphinx Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: seanzhengw/sphinx-pages@master
+        id: sphinx-pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          create_readme: true
