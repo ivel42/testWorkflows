@@ -1,10 +1,15 @@
+# example from: https://seanzhengw.github.io/sphinx-pages/index.html
+# fix access rights: https://github.com/ad-m/github-push-action/issues/96#issuecomment-889984928
+
+name: "Publish on gh_pages"
+
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:    
-      - main
+  #pull_request:
+  #  branches:    
+  #    - main
 
 jobs:
   build:
