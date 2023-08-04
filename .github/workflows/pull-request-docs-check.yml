@@ -12,7 +12,6 @@ jobs:
         python-version: '3.11'
         cache: 'pip' # caching pip dependencies
     - run: pip install -r requirements_frozen.txt
-    - run: python my_script.py
     - uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "."
