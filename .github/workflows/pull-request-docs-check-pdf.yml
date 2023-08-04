@@ -1,6 +1,6 @@
 name: "Pull Request Docs Check PDF"
 on: 
-- pull_request
+  workflow_dispatch:
 
 jobs:
   docs:
