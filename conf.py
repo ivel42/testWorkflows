@@ -13,9 +13,11 @@ author = 'Andreas'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+]
 
 templates_path = ['_templates']
+
 exclude_patterns = ['.venv', '_build', 'Thumbs.db', '.DS_Store']
 
 
@@ -25,3 +27,5 @@ exclude_patterns = ['.venv', '_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+
+master_doc = 'index'
