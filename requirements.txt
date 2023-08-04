@@ -1,0 +1,2 @@
+# generated with "pip freeze" frozen versions!
+sphinx
