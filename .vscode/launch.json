@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "powershell.exe -NoLogo -ExecutionPolicy Bypass -file build_doc.ps1 -html_on 1 -pdf_on 0 > ./_build/html/build_doc.txt; exit",
+            "name": "gen html",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "powershell.exe -NoLogo -ExecutionPolicy Bypass -file build_doc.ps1 -html_on 0 -pdf_on 1 > ./_build/latex/build_doc.txt; exit",
+            "name": "gen pdf",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}
