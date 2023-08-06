@@ -10,7 +10,8 @@ jobs:
     - uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "."
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v3 # https://github.com/actions/upload-artifact
       with:
         name: DocumentationHTML
         path: _build/html/
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`

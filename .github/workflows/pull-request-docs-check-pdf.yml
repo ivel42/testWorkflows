@@ -12,8 +12,9 @@ jobs:
         docs-folder: "."
         pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended"
         build-command: "make latexpdf"
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v3 # https://github.com/actions/upload-artifact
       with:
         name: DocumentationPDF
         path: _build/latex/*.pdf
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
 
